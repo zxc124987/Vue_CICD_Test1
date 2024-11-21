@@ -28,7 +28,6 @@ h1 {
 
 h3 {
   font-size: 1.2rem;
-  opacity: 9;
 }
 
 .greetings h1,
