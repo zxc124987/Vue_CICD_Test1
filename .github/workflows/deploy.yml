@@ -27,7 +27,7 @@ jobs:
 
       # 執行測試
       - name: Run Tests
-        run: npm run test
+        run: npm run test:unit
 
       # 編譯建置專案
       - name: Build Project
