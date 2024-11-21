@@ -4,7 +4,7 @@ defineProps({
     type: String,
     required: true,
   },
-})
+});
 </script>
 
 <template>
@@ -28,6 +28,7 @@ h1 {
 
 h3 {
   font-size: 1.2rem;
+  opacity: 9;
 }
 
 .greetings h1,
