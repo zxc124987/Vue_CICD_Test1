@@ -42,7 +42,7 @@ jobs:
 
       # 編譯建置專案
       - name: Build Project
-        run: npm run build
+        run: vite build
 
       # 部署到 GitHub Pages（如果需要部署）
       - name: Deploy to GitHub Pages
