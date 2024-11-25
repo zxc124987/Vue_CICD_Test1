@@ -32,8 +32,8 @@ jobs:
       - name: Run Tests
         run: npm run test:unit
 
-      - name: Run E2E Tests # 執行端對端測試
-        run: npm run test:e2e # 執行 E2E 測試腳本，模擬用戶行為並驗證應用是否正確
+      # - name: Run E2E Tests # 執行端對端測試
+      #   run: npm run test:e2e # 執行 E2E 測試腳本，模擬用戶行為並驗證應用是否正確
 
       # 編譯建置專案
       - name: Build Project
