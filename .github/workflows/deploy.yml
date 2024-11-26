@@ -59,7 +59,7 @@ jobs:
       # 部署到 GitHub Pages（如果需要部署）
       - name: Deploy to GitHub Pages
         # way 1:
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # 部署到 gh-pages 分支
           folder: dist # 指向打包好的檔案所在資料夾（Vite 預設為 dist 資料夾）
