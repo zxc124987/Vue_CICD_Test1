@@ -66,8 +66,6 @@ jobs:
 
         # way 2:
         run: |
-          git config --global user.name "Hank"
-          git config --global user.email "zzzzz124987@github.com"
           git add .
           git commit -m "Deploy to gh-pages"
           git push origin gh-pages
