@@ -69,8 +69,16 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "zzzzz124987@github.com"
           git add .
+          git status
           git commit -m "Deploy to gh-pages"
-          git push origin gh-pages
+          git push origin master
+
+      # 部署到 GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          publish_dir: ./dist
 
   # way 2:
   # build-and-deploy:
