@@ -59,26 +59,14 @@ jobs:
       # 部署到 GitHub Pages（如果需要部署）
       - name: Deploy to GitHub Pages
         # way 1:
-        # uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          branch: gh-pages # 部署到 gh-pages 分支
+          folder: dist # 指向打包好的檔案所在資料夾（Vite 預設為 dist 資料夾）
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         # with:
         #   github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         #   publish_dir: ./dist
-
-        # way 2:
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "zzzzz124987@github.com"
-          git add .
-          git status
-          git commit -m "Deploy to gh-pages"
-          git push origin master
-
-      # 部署到 GitHub Pages
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          publish_dir: ./dist
 
   # way 2:
   # build-and-deploy:

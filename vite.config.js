@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Vue_CICD_Test1',
+  base: '/Vue_CICD_Test1/',
   plugins: [vue(), vueDevTools()],
   resolve: {
     alias: {
