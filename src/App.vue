@@ -1,10 +1,10 @@
 <script setup>
-import Index from "./views/index.vue";
+import MyIndex from "./views/MyIndex.vue";
 </script>
 
 <template>
   <div>
-    <Index />
+    <MyIndex />
   </div>
 </template>
 
