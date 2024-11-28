@@ -64,6 +64,19 @@ jobs:
           folder: dist # 指向打包好的檔案所在資料夾（Vite 預設為 dist 資料夾）
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
+      # 登入 Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # 建立和推送 Docker 映像檔
+      - name: Build and push Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/vue3-app:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/vue3-app:latest
+
   # way 2:
   # build-and-deploy:
   #   runs-on: ubuntu-latest
