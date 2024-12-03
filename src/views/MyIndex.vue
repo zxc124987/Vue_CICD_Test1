@@ -11,11 +11,13 @@
     <TheWelcome />
   </main>
   <div>this is vue index</div>
+  <WebsocketChat />
 </template>
 
 <script setup>
 import HelloWorld from "../components/HelloWorld.vue";
 import TheWelcome from "../components/TheWelcome.vue";
+import WebsocketChat from "../components/WebsocketChat.vue";
 </script>
 
 <style scoped>
